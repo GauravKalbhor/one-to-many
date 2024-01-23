@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>depart </h1>
+    <form action="{% url 'depart_detail' %}" method="post">
+        {% csrf_token %}
+        {{depart_form}}
+        <input type="submit" value="SUBMIT">
+    </form>
+
+    <center>
+        <form action="{% url 'stu_details' %}" method="post">
+            <h1>{{msg}}</h1>
+            {% csrf_token %}
+            {{stu_form}}
+            <input type="submit" value="SUBMIT">
+        </form>
+    </center>
+</body>
+</html>
